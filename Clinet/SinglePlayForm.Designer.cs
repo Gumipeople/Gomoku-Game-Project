@@ -58,9 +58,9 @@
             // 
             // status
             // 
-            this.status.Location = new System.Drawing.Point(691, 130);
+            this.status.Location = new System.Drawing.Point(655, 139);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(208, 23);
+            this.status.Size = new System.Drawing.Size(291, 23);
             this.status.TabIndex = 2;
             this.status.Text = "게임을 시작해주세요";
             this.status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
