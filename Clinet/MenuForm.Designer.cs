@@ -28,39 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.singlePlayButton = new System.Windows.Forms.Label();
-            this.exitButton = new System.Windows.Forms.Label();
+            this.singlePlayButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.multiPlayButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // singlePlayButton
             // 
-            this.singlePlayButton.Location = new System.Drawing.Point(176, 74);
-            this.singlePlayButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.singlePlayButton.Location = new System.Drawing.Point(228, 53);
             this.singlePlayButton.Name = "singlePlayButton";
-            this.singlePlayButton.Size = new System.Drawing.Size(70, 27);
-            this.singlePlayButton.TabIndex = 0;
+            this.singlePlayButton.Size = new System.Drawing.Size(100, 40);
+            this.singlePlayButton.TabIndex = 2;
             this.singlePlayButton.Text = "혼자하기";
-            this.singlePlayButton.Click += new System.EventHandler(this.label1_Click);
+            this.singlePlayButton.UseVisualStyleBackColor = true;
+            this.singlePlayButton.Click += new System.EventHandler(this.singlePlayButton_Click);
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(176, 158);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.exitButton.Location = new System.Drawing.Point(228, 262);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(70, 27);
-            this.exitButton.TabIndex = 1;
+            this.exitButton.Size = new System.Drawing.Size(100, 40);
+            this.exitButton.TabIndex = 3;
             this.exitButton.Text = "종료하기";
+            this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // multiPlayButton
+            // 
+            this.multiPlayButton.Location = new System.Drawing.Point(228, 155);
+            this.multiPlayButton.Name = "multiPlayButton";
+            this.multiPlayButton.Size = new System.Drawing.Size(100, 40);
+            this.multiPlayButton.TabIndex = 4;
+            this.multiPlayButton.Text = "함께하기";
+            this.multiPlayButton.UseVisualStyleBackColor = true;
+            this.multiPlayButton.Click += new System.EventHandler(this.multiPlayButton_Click);
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(403, 268);
+            this.ClientSize = new System.Drawing.Size(576, 402);
+            this.Controls.Add(this.multiPlayButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.singlePlayButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuForm";
             this.Text = "Gomoku Game";
             this.Load += new System.EventHandler(this.MenuForm_Load);
@@ -69,9 +80,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label singlePlayButton;
-        private System.Windows.Forms.Label exitButton;
+        private System.Windows.Forms.Button singlePlayButton;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button multiPlayButton;
     }
 }
 

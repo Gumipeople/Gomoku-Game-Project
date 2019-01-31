@@ -16,18 +16,15 @@ namespace Clinet
         {
             InitializeComponent();
         }
-        
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Hide();
-            SinglePlayForm singlePlayForm = new SinglePlayForm();
-            singlePlayForm.Show();
-            singlePlayForm.FormClosed += new FormClosedEventHandler(ChildForm_Closed);
-        }
-
+    
         private void MenuForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        void ChildForm_Closed(object sender, FormClosedEventArgs e)
+        {     
+            Show();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -35,9 +32,20 @@ namespace Clinet
             System.Windows.Forms.Application.Exit();
         }
 
-        void ChildForm_Closed(object sender, FormClosedEventArgs e) {     
-            Show();
+        private void singlePlayButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SinglePlayForm singlePlayForm = new SinglePlayForm();
+            singlePlayForm.Show();
+            singlePlayForm.FormClosed += new FormClosedEventHandler(ChildForm_Closed);
         }
 
+        private void multiPlayButton_Click(object sender, EventArgs e)
+        {
+            Hide();
+            MultiPlayForm multiPlayForm = new MultiPlayForm();
+            multiPlayForm.Show();
+            multiPlayForm.FormClosed += new FormClosedEventHandler(ChildForm_Closed);
+        }
     }
 }
